@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Product;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
@@ -13,6 +12,10 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
+        if (Product::query()->exists()) {
+            return;
+        }
+
         Product::factory(10)->create();
     }
 }
