@@ -1,0 +1,40 @@
+# Dependencies
+vendor/
+*/vendor/
+
+node_modules/
+*/node_modules/
+
+# Environment files
+.env
+*/.env
+.env.*
+*/.env.*
+!.env.example
+!*/.env.example
+
+# Laravel generated/cache files
+*/storage/framework/cache/*
+*/storage/framework/sessions/*
+*/storage/framework/views/*
+*/storage/logs/*
+*/bootstrap/cache/*.php
+
+# Nhưng giữ lại thư mục storage bằng .gitkeep nếu có
+!*/storage/framework/cache/.gitkeep
+!*/storage/framework/sessions/.gitkeep
+!*/storage/framework/views/.gitkeep
+!*/storage/logs/.gitkeep
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# PHPUnit / coverage
+.phpunit.result.cache
+coverage/
